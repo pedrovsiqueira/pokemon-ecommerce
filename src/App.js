@@ -4,6 +4,7 @@ import GlobalStyle from './styles/global';
 import { useContext, useEffect } from 'react';
 import { PokemonContext } from 'hooks/pokemonContext';
 import { ToastContainer } from 'react-toastify';
+import { Button } from 'components/Button/Button';
 
 function App() {
   const { fetchPokemonByType } = useContext(PokemonContext);
@@ -15,6 +16,8 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <h1 style={{ color: theme.colors.primary }}>{constants.TITLE}</h1>
+      <Button backgroundColor={theme.colors.detailsButtonColor}>Detalhes</Button>
+      <Button backgroundColor={theme.colors.addButtonColor}>Adicionar</Button>
       <GlobalStyle />
       <ToastContainer />
     </ThemeProvider>
