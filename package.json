@@ -39,7 +39,8 @@
       "prettier"
     ],
     "rules": {
-      "prettier/prettier": "error"
+      "prettier/prettier": "error",
+      "no-use-before-define": 0
     }
   },
   "prettier": {
