@@ -19,7 +19,7 @@ export const Container = styled.div`
   }
 `;
 
-export const Body = styled.header`
+export const Body = styled.body`
   padding-top: 10px;
 `;
 
