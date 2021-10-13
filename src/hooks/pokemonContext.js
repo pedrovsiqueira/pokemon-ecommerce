@@ -10,6 +10,8 @@ const ContextProvider = ({ children }) => {
   const [pokemons, setPokemons] = useState([]);
   const [search, setSearch] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [triggerDetailsModal, setTriggerDetailsModal] = useState(false);
+  const [currentPokemon, setCurrentPokemon] = useState({});
 
   const toastMessageDefaults = {
     position: 'bottom-left',
@@ -34,14 +36,16 @@ const ContextProvider = ({ children }) => {
 
     try {
       const result = await api.get(url);
-      const { id, weight, species, types } = result.data;
+      const { id, weight, species, types, height } = result.data;
+      console.log({ resultado: result.data });
       const pokemonData = {
         id,
         name: species.name.toUpperCase(),
         image: `${pokemonImageUrl}${id}.png`,
         price: generatePrice(id),
         types,
-        weight
+        weight,
+        height
       };
       setPokemons(prevPokemons => [...prevPokemons, pokemonData]);
     } catch {
@@ -69,7 +73,11 @@ const ContextProvider = ({ children }) => {
         pokemons,
         loading,
         setSearch,
-        search
+        search,
+        triggerDetailsModal,
+        setTriggerDetailsModal,
+        currentPokemon,
+        setCurrentPokemon
       }}
     >
       {children}
