@@ -7,6 +7,7 @@ const PokemonContext = createContext();
 
 const ContextProvider = ({ children }) => {
   const [pokemons, setPokemons] = useState([]);
+  const [search, setSearch] = useState([]);
 
   const toastMessageDefaults = {
     position: 'bottom-left',
@@ -38,7 +39,9 @@ const ContextProvider = ({ children }) => {
   return (
     <PokemonContext.Provider
       value={{
-        fetchPokemonByType
+        fetchPokemonByType,
+        setSearch,
+        search
       }}
     >
       {children}
