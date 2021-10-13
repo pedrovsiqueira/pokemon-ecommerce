@@ -2,12 +2,14 @@ import React, { createContext, useCallback, useState } from 'react';
 import { toast } from 'react-toastify';
 import { api } from '../services/api';
 import { constants } from 'utils';
+import { generatePrice, pokemonImageUrl } from 'utils/helpers';
 
 const PokemonContext = createContext();
 
 const ContextProvider = ({ children }) => {
   const [pokemons, setPokemons] = useState([]);
   const [search, setSearch] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const toastMessageDefaults = {
     position: 'bottom-left',
@@ -26,10 +28,34 @@ const ContextProvider = ({ children }) => {
     toast.error(message, { ...toastMessageDefaults });
   };
 
-  const fetchPokemonByType = useCallback(async () => {
+  const fetchPokemonData = useCallback(async pokemon => {
+    let { url } = pokemon.pokemon;
+    url = `pokemon/${url.substring(34)}`;
+
     try {
-      const result = await api.get(constants.TYPE);
-      setPokemons(result.data.pokemon);
+      const result = await api.get(url);
+      const { id, weight, species, types } = result.data;
+      const pokemonData = {
+        id,
+        name: species.name.toUpperCase(),
+        image: `${pokemonImageUrl}${id}.png`,
+        price: generatePrice(id),
+        types,
+        weight
+      };
+      setPokemons(prevPokemons => [...prevPokemons, pokemonData]);
+    } catch {
+      // notifyError('Error while loading the data');
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  const fetchPokemonByType = useCallback(async () => {
+    setLoading(true);
+    try {
+      const result = await api.get(`type/${constants.TYPE}`);
+      result.data.pokemon.forEach(pokemon => fetchPokemonData(pokemon));
       // notifySuccess('Pokemon loaded successfully');
     } catch {
       // notifyError('Error while loading the data');
@@ -40,6 +66,8 @@ const ContextProvider = ({ children }) => {
     <PokemonContext.Provider
       value={{
         fetchPokemonByType,
+        pokemons,
+        loading,
         setSearch,
         search
       }}
