@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const StyledButton = styled.button`
   font-size: 1rem;
-  width: 11rem;
+  width: 5rem;
   color: #fff;
   padding: 0.6rem;
   text-align: center;
