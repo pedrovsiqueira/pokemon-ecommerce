@@ -18,6 +18,7 @@ export const Nav = styled.nav`
 
   img {
     width: 300px;
+    margin-top: 10px;
   }
 
   svg {
