@@ -35,6 +35,32 @@ export const Nav = styled.nav`
   input {
     margin: 0 20px;
   }
+
+  @media only screen and (max-width: 820px) {
+    img {
+      width: 200px;
+    }
+  }
+
+  @media only screen and (max-width: 520px) {
+    img {
+      width: 150px;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+
+    svg {
+      width: 30px;
+    }
+  }
+
+  @media only screen and (max-width: 414px) {
+    img {
+      width: 100px;
+    }
+  }
 `;
 
 export const Content = styled.div`
