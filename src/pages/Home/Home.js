@@ -3,6 +3,7 @@ import { useContext, useEffect } from 'react';
 import { Card } from 'components/Card/Card';
 import { Container, Content } from './styles';
 import { Modal } from 'components/Modal/Modal';
+import { Navbar } from 'components/Nav/Navbar';
 
 export const Home = () => {
   const {
@@ -10,7 +11,9 @@ export const Home = () => {
     pokemons,
     triggerDetailsModal,
     setTriggerDetailsModal,
-    setCurrentPokemon
+    setCurrentPokemon,
+    setSearch,
+    search
   } = useContext(PokemonContext);
 
   useEffect(() => {
@@ -22,8 +25,13 @@ export const Home = () => {
     setCurrentPokemon(typeof pokemon === 'object' ? pokemon : {});
   };
 
+  const handleSearch = event => {
+    setSearch(event.target.value);
+  };
+
   return (
     <Container>
+      <Navbar search={search} handleSearch={handleSearch} />
       <Content>
         {pokemons.map(pokemon => (
           <Card pokemon={pokemon} handleDetails={() => handleDetails(pokemon)} />
