@@ -38,7 +38,7 @@ export const Modal = ({ isOpen, onRequestClose, className }) => {
               <strong>Id:</strong> {id}
             </p>
             <p>
-              <strong>Type:</strong> {constants.TYPE}
+              <strong>Tipo:</strong> {constants.TRANSLATED_TYPE}
             </p>
           </div>
         </Body>
