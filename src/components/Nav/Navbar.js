@@ -14,7 +14,7 @@ export const Navbar = ({ search, handleSearch }) => (
         <a href="test">
           <p>Pedidos</p>
         </a>
-        <CartIcon color="#fff" height={20} />
+        <CartIcon color="#fff" height={23} />
       </div>
     </Content>
   </Nav>

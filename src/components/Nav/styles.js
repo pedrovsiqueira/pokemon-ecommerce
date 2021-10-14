@@ -14,6 +14,7 @@ export const Nav = styled.nav`
   p {
     color: #fff;
     font-size: 1.3rem;
+    font-weight: bold;
   }
 
   img {
