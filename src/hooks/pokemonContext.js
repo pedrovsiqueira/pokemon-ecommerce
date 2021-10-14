@@ -37,7 +37,6 @@ const ContextProvider = ({ children }) => {
     try {
       const result = await api.get(url);
       const { id, weight, species, types, height } = result.data;
-      console.log({ resultado: result.data });
       const pokemonData = {
         id,
         name: species.name.toUpperCase(),
