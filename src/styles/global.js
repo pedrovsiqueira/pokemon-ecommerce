@@ -13,7 +13,6 @@ export default createGlobalStyle`
   }
 
   body {
-    background: ${props => props.theme.colors.backgroundColor};
     color: ${props => props.theme.colors.textColor};
     -webkit-font-smoothing: antialiased;
   }
@@ -52,7 +51,7 @@ export default createGlobalStyle`
 
   .react__modal__content {
     width: 100%;
-    max-width: 260px;
+    max-width: 350px;
     background: #fff;
     padding: 2rem;
     position: relative;

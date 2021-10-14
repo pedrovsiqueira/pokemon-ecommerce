@@ -8,18 +8,19 @@ export const Container = styled.div`
 
   svg {
     position: absolute;
-    left: 10px;
+    left: 20px;
     top: 10px;
   }
 
   input {
     background-color: ${props => props.theme.colors.inputBackgroundColor};
     border: 1px solid ${props => props.theme.colors.inputBackgroundColor};
-    padding: 0.8rem;
+    padding: 0.6rem;
     padding-left: 45px;
-    width: 50%;
+    width: 100%;
     border-radius: 5px;
     transition: all 200ms ease;
+    font-size: 1.2rem;
 
     &::placeholder {
       color: ${props => props.theme.colors.inputTextPlaceholder};
@@ -33,6 +34,30 @@ export const Container = styled.div`
 
     &::-webkit-search-cancel-button:hover {
       cursor: pointer;
+    }
+  }
+
+  @media only screen and (max-width: 820px) {
+    svg {
+      width: 20px;
+      left: 35px;
+      top: 6px;
+    }
+
+    input {
+      font-size: 0.8rem;
+    }
+  }
+
+  @media only screen and (max-width: 414px) {
+    svg {
+      width: 15px;
+      left: 28px;
+      top: 3px;
+    }
+
+    input {
+      padding: 0.4rem 0.6rem 0.4rem 30px;
     }
   }
 `;
