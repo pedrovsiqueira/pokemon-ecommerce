@@ -8,21 +8,23 @@ export const Container = styled.div`
 
   svg {
     position: absolute;
-    left: 10px;
+    left: 20px;
     top: 10px;
   }
 
   input {
     background-color: ${props => props.theme.colors.inputBackgroundColor};
     border: 1px solid ${props => props.theme.colors.inputBackgroundColor};
-    padding: 0.8rem;
+    padding: 0.6rem;
     padding-left: 45px;
-    width: 50%;
+    width: 100%;
     border-radius: 5px;
     transition: all 200ms ease;
+    font-size: 1.2rem;
 
     &::placeholder {
       color: ${props => props.theme.colors.inputTextPlaceholder};
+      font-size: 1.2rem;
     }
 
     &:focus {

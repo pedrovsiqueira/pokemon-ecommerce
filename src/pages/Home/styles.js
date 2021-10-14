@@ -11,6 +11,5 @@ export const Content = styled.div`
   flex: 1 1 0%;
   justify-content: flex-start;
   max-width: 1100px;
-  margin: 0 auto;
-  padding-bottom: 32px;
+  margin: 70px auto 40px auto;
 `;

@@ -12,7 +12,6 @@ export const Container = styled.div`
   align-items: center;
 
   img {
-    box-shadow: inset 0 0 0 1000px ${props => props.theme.colors.cardBackgroundColor};
     width: 200px;
     height: 200px;
     border-radius: 20px;
