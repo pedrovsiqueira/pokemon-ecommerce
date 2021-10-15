@@ -94,14 +94,12 @@ const ContextProvider = ({ children }) => {
         return item;
       });
 
-      setOpenCart(true);
       return setCartItems(updatedCart);
     }
 
     const updatedCart = [...cartItems, { ...pokemon, amount: 1 }];
 
     setCartItems(updatedCart);
-    setOpenCart(true);
     notifySuccess('Pokemon adicionado ao carrinho');
   };
 
@@ -145,6 +143,7 @@ const ContextProvider = ({ children }) => {
   const closeSubmit = () => {
     setCartItems([]);
     setCurrentPokemon({});
+    setTriggerDetailsModal(false);
     setTriggerSubmitModal(false);
   };
 
