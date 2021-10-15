@@ -5,7 +5,7 @@ export const SideCart = styled.div`
   flex-flow: row nowrap;
   align-content: center;
   flex-flow: column nowrap;
-  background-color: #fff;
+  background-color: #eee;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05), 0 0px 40px rgba(0, 0, 0, 0.08);
   position: fixed;
   transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};

@@ -7,6 +7,7 @@ export default createGlobalStyle`
 
   html {
     overflow-x: hidden;
+    background-color: #eee
   }
 
   *{
