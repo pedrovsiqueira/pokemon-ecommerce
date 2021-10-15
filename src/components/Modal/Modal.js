@@ -3,7 +3,7 @@ import { usePokemon } from 'hooks/pokemonContext';
 import { theme } from 'utils';
 import ReactModal from 'react-modal';
 import { ReactComponent as CloseIcon } from 'assets/close.svg';
-import { FallbackLoader } from 'FallbackLoader/FallbackLoader';
+import { FallbackLoader } from 'components/FallbackLoader/FallbackLoader';
 
 export const Modal = ({ isOpen, onRequestClose, className, children }) => {
   const { loading } = usePokemon();

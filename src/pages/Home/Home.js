@@ -5,7 +5,7 @@ import { Container, Content } from './styles';
 import { Modal } from 'components/Modal/Modal';
 import { Navbar } from 'components/Nav/Navbar';
 import { theme } from 'utils';
-import { FallbackLoader } from 'FallbackLoader/FallbackLoader';
+import { FallbackLoader } from 'components/FallbackLoader/FallbackLoader';
 import { Details } from 'components/Details/Details';
 import { Submit } from 'components/Submit/Submit';
 import { useCart } from 'hooks/cartContext';
