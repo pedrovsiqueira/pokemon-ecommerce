@@ -94,6 +94,7 @@ const ContextProvider = ({ children }) => {
         return item;
       });
 
+      notifySuccess('Pokemon adicionado ao carrinho');
       return setCartItems(updatedCart);
     }
 
