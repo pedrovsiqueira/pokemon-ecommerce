@@ -15,7 +15,7 @@ export const Content = styled.div`
 `;
 
 export const SubmitContainer = styled.div`
-  margin-top: 50px;
+  margin-top: 40px;
   text-align: center;
 
   h3 + h3 {
