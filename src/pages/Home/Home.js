@@ -39,6 +39,8 @@ export const Home = () => {
     setSelectedPokemon(pokemon);
   };
 
+  const isEmpty = filteredPokemon.length === 0 && pokemons.length > 0;
+
   return (
     <Container>
       <Navbar />
@@ -53,7 +55,7 @@ export const Home = () => {
           />
         ))}
 
-        {!filteredPokemon?.length && pokemons?.length && (
+        {isEmpty && (
           <NotFoundContainer>
             <h1>Nenhum pokemon encontrado...</h1>
           </NotFoundContainer>
