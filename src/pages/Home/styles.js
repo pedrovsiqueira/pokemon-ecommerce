@@ -26,3 +26,17 @@ export const SubmitContainer = styled.div`
     margin: 10% 0 10% 0;
   }
 `;
+
+export const NotFoundContainer = styled.div`
+  color: ${props => props.theme.colors.textColor};
+  text-align: center;
+  margin-top: 30px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  h2 {
+    width: 320px;
+  }
+`;

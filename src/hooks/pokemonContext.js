@@ -60,7 +60,8 @@ const PokemonProvider = ({ children }) => {
         currentPokemon,
         fetchPokemonData,
         filteredPokemon,
-        setCurrentPokemon
+        setCurrentPokemon,
+        pokemons
       }}
     >
       {children}

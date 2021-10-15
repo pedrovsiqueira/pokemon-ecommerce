@@ -21,6 +21,7 @@ import { ReactComponent as MinusIcon } from 'assets/minus.svg';
 import { ReactComponent as TrashIcon } from 'assets/trash.svg';
 import placeholderImage from 'assets/placeholder.png';
 import { useCart } from 'hooks/cartContext';
+import { NotFoundContainer } from 'pages/Home/styles';
 
 export const Cart = () => {
   const {
@@ -77,6 +78,12 @@ export const Cart = () => {
           </Fragment>
         ))}
       </Content>
+
+      {!cartItems?.length && (
+        <NotFoundContainer>
+          <h2>Carrinho vazio...</h2>
+        </NotFoundContainer>
+      )}
 
       <CartFooter>
         <CartTotal>

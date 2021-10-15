@@ -1,7 +1,7 @@
 import { usePokemon } from 'hooks/pokemonContext';
 import { useEffect, useState } from 'react';
 import { Card } from 'components/Card/Card';
-import { Container, Content } from './styles';
+import { Container, Content, NotFoundContainer } from './styles';
 import { Modal } from 'components/Modal/Modal';
 import { Navbar } from 'components/Nav/Navbar';
 import { theme } from 'utils';
@@ -18,7 +18,8 @@ export const Home = () => {
     triggerDetailsModal,
     setTriggerDetailsModal,
     loading,
-    fetchPokemonData
+    fetchPokemonData,
+    pokemons
   } = usePokemon();
 
   const { handleAddToCart, triggerSubmitModal, total, closeSubmit } = useCart();
@@ -51,6 +52,13 @@ export const Home = () => {
             handle
           />
         ))}
+
+        {!filteredPokemon?.length && pokemons?.length && (
+          <NotFoundContainer>
+            <h1>Nenhum pokemon encontrado...</h1>
+          </NotFoundContainer>
+        )}
+
         <Modal
           isOpen={triggerDetailsModal}
           onRequestClose={handleDetails}
