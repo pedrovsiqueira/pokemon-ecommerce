@@ -1,4 +1,4 @@
-import { Nav, Content } from './styles';
+import { Nav, Content, CartDetails } from './styles';
 import { Input } from 'components/Input/Input';
 import { useContext } from 'react';
 
@@ -19,12 +19,15 @@ export const Navbar = ({ search, handleSearch }) => {
         <Input value={search} placeholder="Digite o que está procurando" onChange={handleSearch} />
         <div>
           {cartItems.length ? (
-            <CartFilledIcon
-              title="Carrinho Preenchido"
-              color="#FFF"
-              height={30}
-              onClick={() => setOpenCart(prevState => !prevState)}
-            />
+            <CartDetails>
+              <CartFilledIcon
+                title="Carrinho Preenchido"
+                color="#FFF"
+                height={30}
+                onClick={() => setOpenCart(prevState => !prevState)}
+              />
+              <span>{cartItems.length}</span>
+            </CartDetails>
           ) : (
             <CartIcon
               title="Carrinho Vazio"

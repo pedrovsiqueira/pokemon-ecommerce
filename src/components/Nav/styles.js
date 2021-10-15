@@ -70,3 +70,18 @@ export const Content = styled.div`
   width: 100%;
   padding: 0 20px;
 `;
+
+export const CartDetails = styled.div`
+  span {
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 900;
+    position: absolute;
+    text-align: center;
+    padding-top: 4px;
+    border-radius: 60%;
+    height: 20px;
+    width: 20px;
+    background: red;
+  }
+`;
