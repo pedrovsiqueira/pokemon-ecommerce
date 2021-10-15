@@ -1,14 +1,10 @@
-import { ContextProvider } from 'hooks/pokemonContext';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 
 ReactDOM.render(
-  <ContextProvider>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </ContextProvider>,
-
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
   document.getElementById('root')
 );

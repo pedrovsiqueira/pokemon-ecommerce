@@ -5,6 +5,7 @@ import { ToastContainer } from 'react-toastify';
 import { Home } from 'pages/Home/Home';
 import 'react-toastify/dist/ReactToastify.min.css';
 import { useEffect } from 'react';
+import AppProvider from 'hooks';
 
 function App() {
   useEffect(() => {
@@ -12,11 +13,13 @@ function App() {
   }, []);
 
   return (
-    <ThemeProvider theme={theme}>
-      <Home />
-      <GlobalStyle />
-      <ToastContainer />
-    </ThemeProvider>
+    <AppProvider>
+      <ThemeProvider theme={theme}>
+        <Home />
+        <GlobalStyle />
+        <ToastContainer />
+      </ThemeProvider>
+    </AppProvider>
   );
 }
 
