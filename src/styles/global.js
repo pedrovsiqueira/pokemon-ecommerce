@@ -1,6 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
+  :root {
+    --toastify-text-color-light: ${props => props.theme.colors.textColor};
+  }
+
   html {
     overflow-x: hidden;
   }
@@ -38,7 +42,7 @@ export default createGlobalStyle`
   }
 
   .react__modal__overlay {
-    background: rgba(0, 0, 0, 0.5);;
+    background: rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
     bottom: 0;
@@ -51,6 +55,7 @@ export default createGlobalStyle`
 
   .react__modal__content {
     width: 100%;
+    height: 525px;
     max-width: 350px;
     background: #fff;
     padding: 2rem;
@@ -70,5 +75,4 @@ export default createGlobalStyle`
     filter: brightness(0.8);
   }
 }
-
 `;
