@@ -1,3 +1,5 @@
+import { toast } from 'react-toastify';
+
 export const generatePrice = id => (id <= 2000 ? id : id / 5);
 
 export const pokemonImageUrl =
@@ -27,3 +29,20 @@ export const generateTotal = (cartItems, setState) => {
 };
 
 export const generateCashback = total => formatPrice(total * 0.2);
+
+const toastMessageDefaults = {
+  position: 'bottom-left',
+  autoClose: 3000,
+  hideProgressBar: true,
+  closeOnClick: true,
+  pauseOnHover: true,
+  draggable: true
+};
+
+export const notifySuccess = message => {
+  toast.success(message, { ...toastMessageDefaults });
+};
+
+export const notifyError = message => {
+  toast.error(message, { ...toastMessageDefaults });
+};
