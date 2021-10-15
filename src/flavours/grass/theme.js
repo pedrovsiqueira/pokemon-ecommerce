@@ -1,8 +1,8 @@
 const theme = {
   colors: {
-    textColor: '#4288DD',
-    primaryButtonColor: '#4288DD',
-    backgroundColor: '#4288DD',
+    textColor: '#4FA967',
+    primaryButtonColor: '#4FA967',
+    backgroundColor: '#4FA967',
     secondaryButtonColor: '#170c3a',
     inputBackgroundColor: '#f5f4f6',
     inputBackgroundColorFocused: '#dedce1',
