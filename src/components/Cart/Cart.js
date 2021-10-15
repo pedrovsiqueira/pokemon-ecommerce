@@ -19,7 +19,7 @@ import { ReactComponent as CloseIcon } from 'assets/close.svg';
 import { ReactComponent as PlusIcon } from 'assets/plus.svg';
 import { ReactComponent as MinusIcon } from 'assets/minus.svg';
 import { ReactComponent as TrashIcon } from 'assets/trash.svg';
-import placeholderImage from 'assets/placeholder.png';
+import placeholderImage from 'assets/placeholder.webp';
 import { useCart } from 'hooks/cartContext';
 import { NotFoundContainer } from 'pages/Home/styles';
 

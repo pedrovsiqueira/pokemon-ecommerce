@@ -1,1 +1,1 @@
-export { default as shop } from './shop.png';
+export { default as shop } from './shop.webp';

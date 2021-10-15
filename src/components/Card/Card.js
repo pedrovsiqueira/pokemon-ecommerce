@@ -2,7 +2,7 @@ import { Button } from 'components/Button/Button';
 import { Content, Container, ButtonsContainer, Heading, SubHeading } from './styles';
 import { theme } from 'utils';
 import { formatPrice } from 'utils/helpers';
-import placeholderImage from 'assets/placeholder.png';
+import placeholderImage from 'assets/placeholder.webp';
 
 export const Card = ({ pokemon, handleDetails, handleAddToCart }) => {
   const { id, image, name, price } = pokemon || {};
