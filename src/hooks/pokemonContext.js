@@ -154,7 +154,6 @@ const ContextProvider = ({ children }) => {
     <PokemonContext.Provider
       value={{
         fetchPokemonByType,
-        pokemons,
         loading,
         setSearch,
         search,
@@ -170,7 +169,6 @@ const ContextProvider = ({ children }) => {
         handleAmountChange,
         triggerSubmitModal,
         handleSubmit,
-        setTriggerSubmitModal,
         closeSubmit,
         filteredPokemon,
         total

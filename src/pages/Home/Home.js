@@ -16,8 +16,6 @@ export const Home = () => {
     filteredPokemon,
     triggerDetailsModal,
     setTriggerDetailsModal,
-    setSearch,
-    search,
     loading,
     fetchPokemonData,
     handleAddToCart,
@@ -41,13 +39,9 @@ export const Home = () => {
     setSelectedPokemon(pokemon);
   };
 
-  const handleSearch = event => {
-    setSearch(event.target.value);
-  };
-
   return (
     <Container>
-      <Navbar search={search} handleSearch={handleSearch} />
+      <Navbar />
       <Content>
         {filteredPokemon.map(pokemon => (
           <Card

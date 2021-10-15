@@ -9,8 +9,12 @@ import assets from 'assets';
 import { Cart } from 'components/Cart/Cart';
 import { PokemonContext } from 'hooks/pokemonContext';
 
-export const Navbar = ({ search, handleSearch }) => {
-  const { cartItems, setOpenCart } = useContext(PokemonContext);
+export const Navbar = () => {
+  const { cartItems, setOpenCart, search, setSearch } = useContext(PokemonContext);
+
+  const handleSearch = event => {
+    setSearch(event.target.value);
+  };
 
   return (
     <Nav>
