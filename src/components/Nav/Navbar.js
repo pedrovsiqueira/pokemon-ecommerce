@@ -19,13 +19,8 @@ export const Navbar = ({ search, handleSearch }) => {
         <Input value={search} placeholder="Digite o que está procurando" onChange={handleSearch} />
         <div>
           {cartItems.length ? (
-            <CartDetails>
-              <CartFilledIcon
-                title="Carrinho Preenchido"
-                color="#FFF"
-                height={30}
-                onClick={() => setOpenCart(prevState => !prevState)}
-              />
+            <CartDetails onClick={() => setOpenCart(prevState => !prevState)}>
+              <CartFilledIcon title="Carrinho Preenchido" color="#FFF" height={30} />
               <span>{cartItems.length}</span>
             </CartDetails>
           ) : (

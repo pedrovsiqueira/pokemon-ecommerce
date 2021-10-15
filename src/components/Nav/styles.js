@@ -23,6 +23,9 @@ export const Nav = styled.nav`
 
   svg {
     width: 50px;
+  }
+
+  svg:last-child {
     cursor: pointer;
   }
 
@@ -72,6 +75,8 @@ export const Content = styled.div`
 `;
 
 export const CartDetails = styled.div`
+  cursor: pointer;
+
   span {
     color: #fff;
     font-size: 0.7rem;
