@@ -18,7 +18,7 @@ export const Container = styled.div`
   }
 `;
 
-export const Body = styled.body`
+export const Content = styled.div`
   padding-top: 10px;
 `;
 

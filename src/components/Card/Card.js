@@ -1,23 +1,30 @@
 import { Button } from 'components/Button/Button';
-import { Body, Container, ButtonsContainer, Heading, SubHeading } from './styles';
+import { Content, Container, ButtonsContainer, Heading, SubHeading } from './styles';
 import { theme } from 'utils';
+import { formatPrice } from 'utils/helpers';
+import placeholderImage from 'assets/placeholder.png';
 
 export const Card = ({ pokemon, handleDetails, handleAddToCart }) => {
   const { id, image, name, price } = pokemon || {};
+
   return (
     <Container key={id}>
-      <img src={image} alt={`Pokemon ${name}`} />
+      <img
+        src={image}
+        alt={`Pokemon ${name}`}
+        onError={event => (event.currentTarget.src = placeholderImage)}
+      />
 
-      <Body>
+      <Content>
         <Heading>{name}</Heading>
-        <SubHeading>{price}</SubHeading>
-      </Body>
+        <SubHeading>{formatPrice(price)}</SubHeading>
+      </Content>
 
       <ButtonsContainer>
-        <Button onClick={handleDetails} backgroundColor={theme.colors.detailsButtonColor}>
+        <Button onClick={handleDetails} backgroundColor={theme.colors.primaryButtonColor}>
           Detalhes
         </Button>
-        <Button onClick={handleAddToCart} backgroundColor={theme.colors.addButtonColor}>
+        <Button onClick={handleAddToCart} backgroundColor={theme.colors.secondaryButtonColor}>
           Comprar
         </Button>
       </ButtonsContainer>
