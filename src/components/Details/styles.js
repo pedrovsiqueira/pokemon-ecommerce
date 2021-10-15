@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const Container = styled.div`
   img {
     margin-top: 1.5rem;
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
     border-radius: 20px;
   }
 `;

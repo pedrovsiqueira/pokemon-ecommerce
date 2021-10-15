@@ -6,7 +6,8 @@ import {
   CartQuantity,
   CartFooter,
   CartTotal,
-  Content
+  Content,
+  CartPrice
 } from './styles';
 import { PokemonContext } from 'hooks/pokemonContext';
 import { Fragment, useContext } from 'react';
@@ -68,7 +69,9 @@ export const Cart = () => {
                 />
               </CartQuantity>
 
-              <p>{formatPrice(item.price * item.amount)}</p>
+              <CartPrice>
+                <p>{formatPrice(item.price * item.amount)}</p>
+              </CartPrice>
             </CartItems>
             <Divider />
           </Fragment>

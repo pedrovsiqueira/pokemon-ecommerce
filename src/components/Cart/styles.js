@@ -12,9 +12,11 @@ export const SideCart = styled.div`
   top: 0;
   right: 0;
   height: 100%;
-  width: 500px;
+  max-width: 500px;
+  min-width: 320px;
   padding-top: 1rem;
   transition: transform 0.3s ease-in-out;
+  z-index: 100;
 `;
 
 export const Heading = styled.div`
@@ -54,6 +56,10 @@ export const CartItems = styled.div`
     margin-top: 3px;
     background: transparent;
   }
+
+  @media only screen and (max-width: 420px) {
+    height: 50px;
+  }
 `;
 
 export const CartContent = styled.div``;
@@ -62,6 +68,13 @@ export const CartProduct = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 110px;
+  margin: 0 10px;
+
+  @media only screen and (max-width: 370px) {
+    p {
+      font-size: 0.6rem;
+    }
+  }
 `;
 
 export const CartQuantity = styled.div`
@@ -70,6 +83,7 @@ export const CartQuantity = styled.div`
   justify-content: center;
   border: 1px solid #e2e2e3;
   border-radius: 5px;
+  margin: 0 10px;
 
   button {
     margin-top: 3px;
@@ -91,17 +105,16 @@ export const CartFooter = styled.footer`
   bottom: 0;
   width: 100%;
   height: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   p {
     color: ${props => props.theme.colors.textColor};
   }
 
-  hr {
-    width: 100%;
-  }
-
   button {
-    width: 100%;
+    width: 90%;
     font-size: 1.2rem;
   }
 `;
@@ -112,5 +125,17 @@ export const CartTotal = styled.div`
   justify-content: center;
   p {
     font-size: 1.2rem;
+  }
+`;
+
+export const CartPrice = styled.div`
+  p {
+    margin-right: 2px;
+  }
+
+  @media only screen and (max-width: 420px) {
+    p {
+      font-size: 0.6rem;
+    }
   }
 `;
