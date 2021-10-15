@@ -1,11 +1,10 @@
-import { PokemonContext } from 'hooks/pokemonContext';
-import { useContext } from 'react';
+import { usePokemon } from 'hooks/pokemonContext';
 import { formatPrice } from 'utils/helpers';
 import { Container, Heading, SubHeading, Content } from './styles';
 import { constants } from 'utils';
 
 export const Details = () => {
-  const { currentPokemon, loading } = useContext(PokemonContext);
+  const { currentPokemon, loading } = usePokemon();
   const { image, name, price, weight, height, id } = currentPokemon;
 
   return (

@@ -1,13 +1,12 @@
 import { ButtonIcon } from 'components/Button/ButtonIcon';
-import { PokemonContext } from 'hooks/pokemonContext';
+import { usePokemon } from 'hooks/pokemonContext';
 import { theme } from 'utils';
-import { useContext } from 'react';
 import ReactModal from 'react-modal';
 import { ReactComponent as CloseIcon } from 'assets/close.svg';
 import { FallbackLoader } from 'FallbackLoader/FallbackLoader';
 
 export const Modal = ({ isOpen, onRequestClose, className, children }) => {
-  const { loading } = useContext(PokemonContext);
+  const { loading } = usePokemon();
 
   return (
     <ReactModal

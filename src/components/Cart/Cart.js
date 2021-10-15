@@ -9,8 +9,7 @@ import {
   Content,
   CartPrice
 } from './styles';
-import { PokemonContext } from 'hooks/pokemonContext';
-import { Fragment, useContext } from 'react';
+import { Fragment } from 'react';
 import { ButtonIcon } from 'components/Button/ButtonIcon';
 import { theme } from 'utils';
 import { Divider } from 'components/Divider/Divider';
@@ -21,6 +20,7 @@ import { ReactComponent as PlusIcon } from 'assets/plus.svg';
 import { ReactComponent as MinusIcon } from 'assets/minus.svg';
 import { ReactComponent as TrashIcon } from 'assets/trash.svg';
 import placeholderImage from 'assets/placeholder.png';
+import { useCart } from 'hooks/cartContext';
 
 export const Cart = () => {
   const {
@@ -31,7 +31,7 @@ export const Cart = () => {
     handleAmountChange,
     handleSubmit,
     total
-  } = useContext(PokemonContext);
+  } = useCart();
 
   return (
     <SideCart open={openCart}>

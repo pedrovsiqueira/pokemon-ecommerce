@@ -1,5 +1,5 @@
-import { PokemonContext } from 'hooks/pokemonContext';
-import { useContext, useEffect, useState } from 'react';
+import { usePokemon } from 'hooks/pokemonContext';
+import { useEffect, useState } from 'react';
 import { Card } from 'components/Card/Card';
 import { Container, Content } from './styles';
 import { Modal } from 'components/Modal/Modal';
@@ -8,6 +8,7 @@ import { theme } from 'utils';
 import { FallbackLoader } from 'FallbackLoader/FallbackLoader';
 import { Details } from 'components/Details/Details';
 import { Submit } from 'components/Submit/Submit';
+import { useCart } from 'hooks/cartContext';
 
 export const Home = () => {
   const [selectedPokemon, setSelectedPokemon] = useState({});
@@ -17,12 +18,10 @@ export const Home = () => {
     triggerDetailsModal,
     setTriggerDetailsModal,
     loading,
-    fetchPokemonData,
-    handleAddToCart,
-    triggerSubmitModal,
-    total,
-    closeSubmit
-  } = useContext(PokemonContext);
+    fetchPokemonData
+  } = usePokemon();
+
+  const { handleAddToCart, triggerSubmitModal, total, closeSubmit } = useCart();
 
   useEffect(() => {
     fetchPokemonByType();

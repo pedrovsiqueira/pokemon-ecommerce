@@ -1,16 +1,17 @@
 import { Nav, Content, CartDetails } from './styles';
 import { Input } from 'components/Input/Input';
-import { useContext } from 'react';
 
 import { ReactComponent as CartIcon } from 'assets/cart.svg';
 import { ReactComponent as CartFilledIcon } from 'assets/cart-fill.svg';
 
 import assets from 'assets';
 import { Cart } from 'components/Cart/Cart';
-import { PokemonContext } from 'hooks/pokemonContext';
+import { usePokemon } from 'hooks/pokemonContext';
+import { useCart } from 'hooks/cartContext';
 
 export const Navbar = () => {
-  const { cartItems, setOpenCart, search, setSearch } = useContext(PokemonContext);
+  const { search, setSearch } = usePokemon();
+  const { cartItems, setOpenCart } = useCart();
 
   const handleSearch = event => {
     setSearch(event.target.value);
