@@ -13,6 +13,7 @@ export const Card = ({ pokemon, handleDetails, handleAddToCart }) => {
         src={image}
         alt={`Pokemon ${name}`}
         onError={event => (event.currentTarget.src = placeholderImage)}
+        loading="lazy"
       />
 
       <Content>
