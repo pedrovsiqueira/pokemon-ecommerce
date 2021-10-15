@@ -11,12 +11,8 @@ export const StyledButton = styled.button`
   transition: background-color 200ms linear;
   background-color: ${props => props.backgroundColor};
 
-  :hover {
-    filter: brightness(90%);
-
-    &:disabled {
-      cursor: not-allowed;
-      background-color: $btn-grey;
-    }
+  :hover:disabled {
+    cursor: not-allowed;
+    background-color: $btn-grey;
   }
 `;
