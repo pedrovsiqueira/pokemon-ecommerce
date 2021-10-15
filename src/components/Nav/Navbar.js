@@ -15,9 +15,7 @@ export const Navbar = ({ search, handleSearch }) => {
   return (
     <Nav>
       <Content>
-        <a href="/">
-          <img src={assets.shop} alt="Shop Title" />
-        </a>
+        <img src={assets.shop} alt="Shop Title" />
         <Input value={search} placeholder="Digite o que está procurando" onChange={handleSearch} />
         <div>
           {cartItems.length ? (
