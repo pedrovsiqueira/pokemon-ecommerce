@@ -13,5 +13,10 @@ export const StyledButton = styled.button`
 
   :hover {
     filter: brightness(90%);
+
+    &:disabled {
+      cursor: not-allowed;
+      background-color: $btn-grey;
+    }
   }
 `;

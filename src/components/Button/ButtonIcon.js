@@ -1,5 +1,5 @@
-export const ButtonIcon = ({ Icon, onClick }) => (
-  <button type="button" onClick={onClick} className="btn--close-modal">
+export const ButtonIcon = ({ Icon, onClick, className }) => (
+  <button type="button" onClick={onClick} className={className}>
     <Icon />
   </button>
 );

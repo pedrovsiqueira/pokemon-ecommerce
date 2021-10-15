@@ -23,10 +23,10 @@
     "eject": "react-scripts eject",
     "start:fire": "yarn set-environment --fire && react-scripts start",
     "start:water": "yarn set-environment --water && react-scripts start",
-    "start:air": "yarn set-environment --air && react-scripts start",
+    "start:grass": "yarn set-environment --grass && react-scripts start",
     "build:fire": "yarn set-environment --fire && react-scripts build",
     "build:water": "yarn set-environment --water && react-scripts build",
-    "build:air": "yarn set-environment --air && react-scripts build",
+    "build:grass": "yarn set-environment --grass && react-scripts build",
     "set-environment": "node scripts/set-environment"
   },
   "eslintConfig": {

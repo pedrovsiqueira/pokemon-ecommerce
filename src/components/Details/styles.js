@@ -23,7 +23,7 @@ export const SubHeading = styled.p`
   ${props => props.theme.colors.textColor}
 `;
 
-export const Body = styled.body`
+export const Content = styled.div`
   margin-top: 1.5rem;
   width: 100%;
   display: flex;
