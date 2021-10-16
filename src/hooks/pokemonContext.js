@@ -2,6 +2,7 @@ import { createContext, useCallback, useContext, useEffect, useState } from 'rea
 import { api } from '../services/api';
 import { constants } from 'utils';
 import { formatPokemonData, notifyError } from 'utils/helpers';
+import { useDebounce } from 'use-debounce';
 
 const PokemonContext = createContext();
 
@@ -12,11 +13,12 @@ const PokemonProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [triggerDetailsModal, setTriggerDetailsModal] = useState(false);
   const [currentPokemon, setCurrentPokemon] = useState({});
+  const [debouncedSearch] = useDebounce(search, 500);
 
   useEffect(() => {
-    const result = pokemons.filter(pokemon => pokemon.name.toLowerCase().includes(search));
+    const result = pokemons.filter(pokemon => pokemon.name.toLowerCase().includes(debouncedSearch));
     setFilteredPokemon(result);
-  }, [pokemons, search]);
+  }, [pokemons, debouncedSearch]);
 
   const fetchPokemonData = useCallback(async pokemon => {
     setLoading(true);
