@@ -22,12 +22,6 @@ export const formatPokemonData = pokemon => {
 export const formatPrice = price =>
   price?.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
 
-export const generateTotal = (cartItems, setState) => {
-  const total = cartItems.reduce((a, b) => a + b.price * b.amount, 0);
-  setState(total);
-  return formatPrice(total);
-};
-
 export const generateCashback = total => formatPrice(total * 0.2);
 
 const toastMessageDefaults = {
