@@ -5,7 +5,7 @@ import { formatPrice } from 'utils/helpers';
 import placeholderImage from 'assets/placeholder.webp';
 
 export const Card = ({ pokemon, handleDetails, handleAddToCart }) => {
-  const { id, image, name, price } = pokemon || {};
+  const { id, image, name, price } = pokemon;
 
   return (
     <Container key={id}>
@@ -14,6 +14,7 @@ export const Card = ({ pokemon, handleDetails, handleAddToCart }) => {
         alt={`Pokemon ${name}`}
         onError={event => (event.currentTarget.src = placeholderImage)}
         loading="lazy"
+        data-testid="card-img"
       />
 
       <Content>
