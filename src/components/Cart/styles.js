@@ -17,6 +17,10 @@ export const SideCart = styled.div`
   padding-top: 1rem;
   transition: transform 0.3s ease-in-out;
   z-index: 100;
+
+  @media only screen and (min-width: 800px) {
+    min-width: 460px;
+  }
 `;
 
 export const Heading = styled.div`
@@ -24,6 +28,7 @@ export const Heading = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 10px 0 5px 20px;
+  padding: 0 5px;
 
   width: 100%;
 
