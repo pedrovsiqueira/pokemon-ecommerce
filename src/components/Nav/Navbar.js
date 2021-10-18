@@ -24,12 +24,16 @@ export const Navbar = () => {
         <Input value={search} placeholder="Digite o que está procurando" onChange={handleSearch} />
         <div>
           {cartItems.length ? (
-            <CartDetails onClick={() => setOpenCart(prevState => !prevState)}>
+            <CartDetails
+              data-testid="navbar-cart"
+              onClick={() => setOpenCart(prevState => !prevState)}
+            >
               <CartFilledIcon title="Carrinho Preenchido" color="#FFF" height={30} />
               <span>{cartItems.length}</span>
             </CartDetails>
           ) : (
             <CartIcon
+              data-testid="navbar-empty-cart"
               title="Carrinho Vazio"
               color="#FFF"
               height={30}
