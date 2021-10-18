@@ -1,7 +1,7 @@
 # Desafio B2W
 
 <div align="center">
-  ![fire-store](https://user-images.githubusercontent.com/49031534/137669475-56f2f3ff-09ba-405c-9f23-6958d4b7838d.png)
+  ![fire-store](https://user-images.githubusercontent.com/49031534/137669533-50e900c8-b82f-45e2-b982-b7f0095ae307.png)
 </div>
 
 ## About The Project
