@@ -4,7 +4,7 @@
 
 ## About The Project
 
-I create a Frontend E-Commerce application using the PokéAPI. The following tasks were implemented successfully:
+I created a Frontend E-Commerce application using the PokéAPI. The following tasks were implemented successfully:
 
 - Product catalog
 - Side cart
