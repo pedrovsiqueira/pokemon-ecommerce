@@ -1,9 +1,9 @@
 import { theme } from 'utils';
 import user from '@testing-library/user-event';
 import placeholderImage from 'assets/placeholder.webp';
-const { render, fireEvent, waitFor, screen } = require('@testing-library/react');
-const { Card } = require('components/Card/Card');
-const { ThemeProvider } = require('styled-components');
+import { render, fireEvent, waitFor, screen } from '@testing-library/react';
+import { ThemeProvider } from 'styled-components';
+import { Card } from 'components/Card/Card';
 
 const CardComponent = () => (
   <ThemeProvider theme={theme}>
