@@ -21,6 +21,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:coverage": "CI=1 yarn test --coverage",
     "eject": "react-scripts eject",
     "start:fire": "yarn set-environment --fire && react-scripts start",
     "start:water": "yarn set-environment --water && react-scripts start",
@@ -29,6 +30,13 @@
     "build:water": "yarn set-environment --water && react-scripts build",
     "build:grass": "yarn set-environment --grass && react-scripts build",
     "set-environment": "node scripts/set-environment"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/index.js",
+      "!src/styles/*"
+    ]
   },
   "eslintConfig": {
     "extends": [
@@ -54,6 +62,7 @@
   "devDependencies": {
     "eslint-config-prettier": "^8.0.0",
     "eslint-plugin-prettier": "^3.3.1",
+    "msw": "^0.35.0",
     "prettier": "^2.2.1"
   },
   "browserslist": {
