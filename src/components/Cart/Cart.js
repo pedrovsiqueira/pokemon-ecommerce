@@ -60,6 +60,7 @@ export const Cart = () => {
                 src={item.image}
                 alt={item.name}
                 onError={event => (event.currentTarget.src = placeholderImage)}
+                data-testid="cart-image"
               />
 
               <CartProduct>
@@ -70,9 +71,11 @@ export const Cart = () => {
                 <ButtonIcon
                   onClick={() => handleAmountChange('-', item.id, item.amount)}
                   Icon={MinusIcon}
+                  data-testid="cart-decrease-btn"
                 />
                 {item.amount}
                 <ButtonIcon
+                  data-testid="cart-increase-btn"
                   onClick={() => handleAmountChange('+', item.id, item.amount)}
                   Icon={PlusIcon}
                 />

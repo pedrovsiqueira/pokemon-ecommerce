@@ -17,7 +17,12 @@ export const Modal = ({ isOpen, onRequestClose, className, children }) => {
       ariaHideApp={false}
     >
       {children}
-      <ButtonIcon onClick={onRequestClose} Icon={CloseIcon} className="btn--close-modal" />
+      <ButtonIcon
+        data-testid="modal-close-btn"
+        onClick={onRequestClose}
+        Icon={CloseIcon}
+        className="btn--close-modal"
+      />
 
       <FallbackLoader visible={loading} color={theme.colors.textColor} />
     </ReactModal>
