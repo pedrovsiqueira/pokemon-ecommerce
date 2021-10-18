@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+# Desafio B2W
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+  <img src="" />
+</div>
 
-## Available Scripts
+## About The Project
 
-In the project directory, you can run:
+The challenge was to create a Frontend E-Commerce application using the PokéAPI. The following tasks were implemented successfully:
 
-### `yarn start`
+- Product catalog
+- Side cart
+- Cart Summary
+- 3 stores with different styles and types of Pokémon (water, grass and fire)
+- Search bar to filter Pokemon
+- Checkout button, restarting the checkout process
+- Thank you modal when finalizing the purchase
+- Save user purchase data locally so you don't lose it when refreshing the page (local storage)
+- Tests using React Testing Library and Jest
+- Responsive design (starting from 320px and up)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Built With:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [Javascript](https://www.javascript.com/) - An object-oriented computer programming language commonly used to create interactive effects within web browsers.
+- [ReactJS](https://pt-br.reactjs.org/) - A JavaScript library for building user interfaces.
+- [Styled Components](https://styled-components.com/) - Visual primitives for the component age. Use the best bits of ES6 and CSS to style your apps without stress.
 
-### `yarn test`
+<!-- USAGE EXAMPLES -->
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
 
-### `yarn build`
+<!-- GETTING STARTED -->
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<!-- PLACEHOLDER FOR PROJECT OVERVIEW -->
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
 
-### `yarn eject`
+Add loom video here
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+In order to run this project locally you will need to:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Clone and install this repository - https://github.com/pedrovsiqueira/desafio-b2w
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Installation
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. Clone the repo
 
-## Learn More
+```sh
+git clone https://github.com/pedrovsiqueira/desafio-b2w
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Install YARN packages
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```sh
+yarn install
+```
 
-### Code Splitting
+3. Rename .env.example to .env
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. Run the app.
 
-### Analyzing the Bundle Size
+```sh
+yarn start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+5. Access the application through the following link afer doing the steps 1 - 4.
 
-### Making a Progressive Web App
+```sh
+http://localhost:3000/
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Tests:
 
-### Advanced Configuration
+Tests were done using jest and react-testing-library. To see the tests run the following commands:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. Test results
 
-### Deployment
+```sh
+yarn test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+2. Test results using coverage
 
-### `yarn build` fails to minify
+```sh
+yarn test:coverage
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<!-- CONTACT -->
+
+## Contact
+
+Pedro Siqueira - [email](mailto:pedro.v.siqueira@gmail.com) - [linkedin](https://www.linkedin.com/in/pedrovsiqueira/) - [portfolio](http://pedrosiqueira.com.br/)
