@@ -1,37 +1,44 @@
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { Details } from 'components/Details/Details';
 import AppProvider from 'hooks';
+import { ThemeProvider } from 'styled-components';
 import { theme } from 'utils';
 
-const { ThemeProvider } = require('styled-components');
+jest.mock('hooks/pokemonContext', () => ({
+  ...jest.requireActual('hooks/pokemonContext'),
+  usePokemon: () => ({
+    loading: false,
+    currentPokemon: currentPokemonMock
+  })
+}));
 
-const DetailsComponent = () => (
+const currentPokemonMock = {
+  name: 'BULBASAUR',
+  url: 'https://pokeapi.co/api/v2/pokemon/1/',
+  image:
+    'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png',
+  id: 1,
+  price: 'R$1.00',
+  weight: 10,
+  height: 2
+};
+
+const DetailsComponent = ({ children }) => (
   <AppProvider>
-    <ThemeProvider theme={theme}>
-      <Details />
-    </ThemeProvider>
+    <ThemeProvider theme={theme}>{children}</ThemeProvider>
   </AppProvider>
 );
 
 test('Should render Details without crashing', () => {
-  render(<DetailsComponent />);
+  render(<Details />, { wrapper: DetailsComponent });
 });
 
-test('Should render Details without crashing1', () => {
-  const currentPokemonMock = {
-    name: 'BULBASAUR',
-    url: 'https://pokeapi.co/api/v2/pokemon/1/',
-    image:
-      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png',
-    id: 1,
-    price: 'R$1.00'
-  };
-  render(<DetailsComponent />);
+test('Should render pokemon data', () => {
+  render(<Details />, { wrapper: DetailsComponent });
+  expect(screen.getByText(currentPokemonMock.price)).toBeInTheDocument();
+  expect(screen.getByText(currentPokemonMock.name)).toBeInTheDocument();
+  expect(screen.getByText(`${currentPokemonMock.weight}kg`)).toBeInTheDocument();
+  expect(screen.getByText(`${currentPokemonMock.height}m`)).toBeInTheDocument();
 
-  jest.mock('hooks/pokemonContext', () =>
-    jest.fn(() => ({
-      currentPokemon: currentPokemonMock,
-      loading: false
-    }))
-  );
+  expect(screen.getByRole('img')).toHaveAttribute('src', currentPokemonMock.image);
 });
