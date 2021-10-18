@@ -29,6 +29,8 @@ The challenge was to create a Frontend E-Commerce application using the PokéAPI
 
 ## Usage
 
+The project is deployed and can be accessed at https://water-pokemon-shop.netlify.app/ , https://fire-pokemon-shop.netlify.app/ or https://grass-pokemon-shop.netlify.app/
+
 <!-- GETTING STARTED -->
 
 ## Getting Started
@@ -69,6 +71,12 @@ yarn start
 
 ```sh
 http://localhost:3000/
+```
+
+5. If you want to change stores, run the following command
+
+```sh
+yarn start:fire or yarn start:water
 ```
 
 ### Tests:
