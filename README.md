@@ -1,10 +1,10 @@
-# Desafio B2W
+# Pokemon E-Commerce
   
 ![fire-store](https://user-images.githubusercontent.com/49031534/137669533-50e900c8-b82f-45e2-b982-b7f0095ae307.png)
 
 ## About The Project
 
-The challenge was to create a Frontend E-Commerce application using the PokéAPI. The following tasks were implemented successfully:
+I create a Frontend E-Commerce application using the PokéAPI. The following tasks were implemented successfully:
 
 - Product catalog
 - Side cart
