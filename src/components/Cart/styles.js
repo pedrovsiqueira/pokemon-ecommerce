@@ -63,7 +63,10 @@ export const CartItems = styled.div`
   }
 
   @media only screen and (max-width: 420px) {
-    height: 50px;
+    img {
+      height: 50px;
+      width: 50px;
+    }
   }
 `;
 
@@ -77,7 +80,7 @@ export const CartProduct = styled.div`
 
   @media only screen and (max-width: 370px) {
     p {
-      font-size: 0.6rem;
+      font-size: 0.7rem;
     }
   }
 `;
@@ -138,9 +141,9 @@ export const CartPrice = styled.div`
     margin-right: 2px;
   }
 
-  @media only screen and (max-width: 420px) {
+  @media only screen and (max-width: 370px) {
     p {
-      font-size: 0.6rem;
+      font-size: 0.7rem;
     }
   }
 `;
