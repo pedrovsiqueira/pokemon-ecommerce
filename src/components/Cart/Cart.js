@@ -39,14 +39,22 @@ export const Cart = () => {
       <Content>
         <Heading>
           <h1>Carrinho</h1>
-          <ButtonIcon onClick={() => setOpenCart(prevState => !prevState)} Icon={CloseIcon} />
+          <ButtonIcon
+            data-testid="cart-close-btn"
+            onClick={() => setOpenCart(prevState => !prevState)}
+            Icon={CloseIcon}
+          />
         </Heading>
         <Divider />
 
         {cartItems.map(item => (
           <Fragment key={item.id}>
             <CartItems>
-              <ButtonIcon onClick={() => handleRemoveFromCart(item.id)} Icon={TrashIcon} />
+              <ButtonIcon
+                data-testid="cart-remove-button"
+                onClick={() => handleRemoveFromCart(item.id)}
+                Icon={TrashIcon}
+              />
 
               <img
                 src={item.image}
