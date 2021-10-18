@@ -41,14 +41,14 @@ https://www.loom.com/share/770d1d5d67234e1087ed3973a55a5619
 
 In order to run this project locally you will need to:
 
-- Clone and install this repository - https://github.com/pedrovsiqueira/desafio-b2w
+- Clone and install this repository - https://github.com/pedrovsiqueira/pokemon-ecommerce
 
 ### Installation
 
 1. Clone the repo
 
 ```sh
-git clone https://github.com/pedrovsiqueira/desafio-b2w
+git clone https://github.com/pedrovsiqueira/pokemon-ecommerce
 ```
 
 2. Install YARN packages
