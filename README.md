@@ -1,7 +1,7 @@
 # Desafio B2W
 
 <div align="center">
-  <img src="" />
+  ![fire-store](https://user-images.githubusercontent.com/49031534/137669475-56f2f3ff-09ba-405c-9f23-6958d4b7838d.png)
 </div>
 
 ## About The Project
@@ -82,6 +82,9 @@ yarn start:fire or yarn start:water
 ### Tests:
 
 Tests were done using jest and react-testing-library. To see the tests run the following commands:
+
+![tests](https://user-images.githubusercontent.com/49031534/137669500-b210f953-a6ba-48dc-baf6-fcdd3e63f33c.png)
+
 
 1. Test results
 
