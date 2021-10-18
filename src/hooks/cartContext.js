@@ -46,13 +46,9 @@ const CartProvider = ({ children }) => {
   };
 
   const handleRemoveFromCart = pokemonId => {
-    try {
-      const updatedCart = cartItems.filter(item => item.id !== pokemonId);
-      setCartItems(updatedCart);
-      notifySuccess('Pokemon removido com sucesso');
-    } catch {
-      notifyError('Erro ao remover do carrinho');
-    }
+    const updatedCart = cartItems.filter(item => item.id !== pokemonId);
+    setCartItems(updatedCart);
+    notifySuccess('Pokemon removido com sucesso');
   };
 
   const handleAmountChange = (operation, id, amount) => {
@@ -73,13 +69,9 @@ const CartProvider = ({ children }) => {
   };
 
   const handleSubmit = () => {
-    try {
-      setOpenCart(false);
-      setTriggerSubmitModal(true);
-      notifySuccess('Compra finalizada com sucesso');
-    } catch {
-      notifyError('Erro ao finalizar compra');
-    }
+    setOpenCart(false);
+    setTriggerSubmitModal(true);
+    notifySuccess('Compra finalizada com sucesso');
   };
 
   const closeSubmit = () => {
@@ -117,6 +109,7 @@ const useCart = () => {
   const context = useContext(CartContext);
 
   if (!context) {
+    notifyError('useCart must be used within a CartProvider');
     throw new Error('useCart must be used within a CartProvider');
   }
 

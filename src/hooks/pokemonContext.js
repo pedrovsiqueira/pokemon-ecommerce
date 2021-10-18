@@ -75,6 +75,7 @@ const usePokemon = () => {
   const context = useContext(PokemonContext);
 
   if (!context) {
+    notifyError('useCart must be used within a CartProvider');
     throw new Error('usePokemon must be used within a PokemonProvider');
   }
 
