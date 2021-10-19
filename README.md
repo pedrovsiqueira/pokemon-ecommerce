@@ -37,8 +37,6 @@ The project is deployed and can be accessed at https://water-pokemon-shop.netlif
 
 ### Prerequisites
 
-https://www.loom.com/share/770d1d5d67234e1087ed3973a55a5619
-
 In order to run this project locally you will need to:
 
 - Clone and install this repository - https://github.com/pedrovsiqueira/pokemon-ecommerce
